@@ -165,17 +165,17 @@
 				<div class="row">
 					<div class="col-sm-12 text-center">
 						<div class="form-wrapper">
-							<form class="form-email">
+							<form class="form-email" action="/rsvp" method="post">
 								<div class="form-section">
-									<input type="text" name="name" class="validate-required" placeholder="Your Name / Names">
+									<input type="text" name="name" placeholder="Your Name / Names">
 									<div class="radio-group">
 										<div class="radio-holder btn checked">
 											<span>Can't Wait</span>
-											<input type="radio" name="rsvp" value="attending" checked="checked">
+											<input type="radio" name="rsvp" value="Attending" checked="checked">
 										</div>
 										<div class="radio-holder btn">
 											<span>Can't Come</span>
-											<input type="radio" name="rsvp" value="not-attending">
+											<input type="radio" name="rsvp" value="Not-Attending">
 										</div>
 									</div>
 								</div>
@@ -184,12 +184,12 @@
 									<input type="text" name="song" placeholder="Any Song Requests?">
 								</div>
 								<input id='rsvp-btn'type="submit" value="RSVP">
-								<!-- <div class="form-error">
+								<div class="form-error">
 									<span>Please fill out all fields</span>
 								</div>
 								<div class="form-success">
 									<span>Thanks for your RSVP!</span>
-								</div> -->
+								</div>
 							</form>
 						</div>
 					</div>

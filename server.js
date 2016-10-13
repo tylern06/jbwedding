@@ -23,31 +23,33 @@ var nodemailer = require('nodemailer');
  
 // create reusable transporter object using the default SMTP transport 
 var transporter = nodemailer.createTransport('smtps://pokemongomapper%40gmail.com:pikachu1@smtp.gmail.com');
- 
-// setup e-mail data with unicode symbols 
-var mailOptions = {
-    from: '"Pikachu" <pokemongomapper@bgmail.com>', // sender address 
-    to: 'tynguyen06@gmail.com', // list of receivers 
-    subject: 'Hello ✔', // Subject line 
-    text: 'Hello world', // plaintext body 
-    html: '<b>Testing 123 world 🐴</b>' // html body 
-};
- 
+  
 
 app.get('/', function (req,res){
 		console.log(req.body)
  		res.render("index");
 })
 
-app.get('/test', function (req,res){
-		// send mail with defined transport object 
-		transporter.sendMail(mailOptions, function(error, info){
-		    if(error){
-		        return console.log(error);
-		    }
-		    console.log('Message sent: ' + info.response);
-		});
-		res.render('test');
+app.post('/rsvp', function (req,res){
+	// setup e-mail data with unicode symbols 
+		if(req.body.name > 2){
+			var mailOptions = {
+			    from: '"Pikachu" <pokemongomapper@bgmail.com>', // sender address 
+			    to: 'tynguyen06@gmail.com', // list of receivers 
+			    subject: 'Josh & Belinda Wedding RSVP', // Subject line 
+			    text: 'Hey Guys', // plaintext body 
+			    html:  "<table style='border-collapse: collapse; border: 1px solid black;width: 250px;'><tr><th style='text-align: left;'>Name</th><th style='text-align: left;'>RSVP</th><th style='text-align: left;'>Song Request</th></tr><tr><td>" + req.body.name + "</td><td>" + req.body.rsvp + "</td><td>" + req.body.song + "</td></tr></table>"// html body 
+			};
+			console.log(req.body)
+			//send mail with defined transport object 
+			transporter.sendMail(mailOptions, function(error, info){
+			    if(error){
+			        return console.log(error);
+			    }
+			    console.log('Message sent: ' + info.response);
+			});
+		}
+		res.redirect('/');
 })
 
 port = 8000;
