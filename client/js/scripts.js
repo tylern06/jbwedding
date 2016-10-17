@@ -1,4 +1,4 @@
-$(document).ready(function() { 
+$(document).ready(function() {
 
     // "use strict";
 
@@ -132,12 +132,12 @@ $(document).ready(function() {
 
     $('form input[type="radio"]').each(function() {
         var valueText = $(this).closest('.radio-holder').find('span').text();
-        $(this).attr('value', convertToSlug(valueText));
+        // $(this).attr('value', convertToSlug(valueText));
     });
 
     $('form input[type="text"]').each(function() {
         var attrText = $(this).attr('placeholder');
-        $(this).attr('name', convertToSlug(attrText));
+        // $(this).attr('name', convertToSlug(attrText));
     });
 
 
@@ -156,7 +156,7 @@ $(document).ready(function() {
     // });
 $('#insane').spectragram('getPopular');
 
-   
+
 
     $('.validate-required, .validate-email').on('blur change', function() {
         validateFields($(this).closest('form'));
@@ -204,9 +204,9 @@ $('#insane').spectragram('getPopular');
         return error;
     }
 
-}); 
+});
 
-$(window).load(function() { 
+$(window).load(function() {
 
     // Append Instagram BGs
 
@@ -229,7 +229,7 @@ $(window).load(function() {
         }
     }, 500);
 
-}); 
+});
 
 // function convertToSlug(text) {
 //     return text

@@ -1,0 +1,27 @@
+div.hotels1 {
+  width: 285px;
+  height: 185px;
+  background-image: url('../img/econo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+
+}
+
+div.hotels2 {
+  width: 285px;
+  height: 185px;
+  background-image: url('../img/bestwestern.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  /*margin-right: 30px;*/
+}
+div.hotels {
+  margin: 0 auto;
+  display: block;
+  /*border: 1px solid red;*/
+  /*min-height: 300px;*/
+  width: 620px;
+  min-height: 350px;
+}

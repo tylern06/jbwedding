@@ -34,8 +34,8 @@ app.post('/rsvp', function (req,res){
 	// setup e-mail data with unicode symbols
 		if(req.body.name > 2){
 			var mailOptions = {
-			    from: '"Pikachu" <pokemongomapper@bgmail.com>', // sender address
-			    to: 'tynguyen06@gmail.com', // list of receivers
+			    from: '"RSVP" <pokemongomapper@bgmail.com>', // sender address
+			    to: 'belindanghiem@gmail.com', // list of receivers
 			    subject: 'Josh & Belinda Wedding RSVP', // Subject line
 			    text: 'Hey Guys', // plaintext body
 			    html:  "<table style='border-collapse: collapse; border: 1px solid black;width: 250px;'><tr><th style='text-align: left;'>Name</th><th style='text-align: left;'>RSVP</th><th style='text-align: left;'>Song Request</th></tr><tr><td>" + req.body.name + "</td><td>" + req.body.rsvp + "</td><td>" + req.body.song + "</td></tr></table>"// html body
