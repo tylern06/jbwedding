@@ -20,10 +20,10 @@ app.set('view engine', 'ejs');
 // app.use('/fonts', express.static(__dirname + '/node_modules/bootstrap/fonts')); // redirect ui bootstrap
 
 var nodemailer = require('nodemailer');
- 
-// create reusable transporter object using the default SMTP transport 
+
+// create reusable transporter object using the default SMTP transport
 var transporter = nodemailer.createTransport('smtps://pokemongomapper%40gmail.com:pikachu1@smtp.gmail.com');
-  
+
 
 app.get('/', function (req,res){
 		console.log(req.body)
@@ -31,17 +31,17 @@ app.get('/', function (req,res){
 })
 
 app.post('/rsvp', function (req,res){
-	// setup e-mail data with unicode symbols 
+	// setup e-mail data with unicode symbols
 		if(req.body.name > 2){
 			var mailOptions = {
-			    from: '"Pikachu" <pokemongomapper@bgmail.com>', // sender address 
-			    to: 'tynguyen06@gmail.com', // list of receivers 
-			    subject: 'Josh & Belinda Wedding RSVP', // Subject line 
-			    text: 'Hey Guys', // plaintext body 
-			    html:  "<table style='border-collapse: collapse; border: 1px solid black;width: 250px;'><tr><th style='text-align: left;'>Name</th><th style='text-align: left;'>RSVP</th><th style='text-align: left;'>Song Request</th></tr><tr><td>" + req.body.name + "</td><td>" + req.body.rsvp + "</td><td>" + req.body.song + "</td></tr></table>"// html body 
+			    from: '"Pikachu" <pokemongomapper@bgmail.com>', // sender address
+			    to: 'tynguyen06@gmail.com', // list of receivers
+			    subject: 'Josh & Belinda Wedding RSVP', // Subject line
+			    text: 'Hey Guys', // plaintext body
+			    html:  "<table style='border-collapse: collapse; border: 1px solid black;width: 250px;'><tr><th style='text-align: left;'>Name</th><th style='text-align: left;'>RSVP</th><th style='text-align: left;'>Song Request</th></tr><tr><td>" + req.body.name + "</td><td>" + req.body.rsvp + "</td><td>" + req.body.song + "</td></tr></table>"// html body
 			};
 			console.log(req.body)
-			//send mail with defined transport object 
+			//send mail with defined transport object
 			transporter.sendMail(mailOptions, function(error, info){
 			    if(error){
 			        return console.log(error);
@@ -52,7 +52,7 @@ app.post('/rsvp', function (req,res){
 		res.redirect('/');
 })
 
-port = 8000;
+var port = process.env.PORT || 5000;
 var server = app.listen(port, function(){
 	console.log("********** PORT " + port + " PORT **********")
 });
