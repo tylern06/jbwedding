@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="css/flexslider.min.css" rel="stylesheet" type="text/css" media="all"/>
+	<link rel="stylesheet" href="/css/flipclock.css" media="screen" title="no title">
 	<link href="css/theme.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="css/custom.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700%7CLibre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
@@ -50,10 +51,12 @@
 						<h1>JOSH &amp; BELINDA</h1>
 						<h4>May 13th, 2017<br></h4>
 						<a href="#rsvp" class="btn inner-link"target="default">RSVP Now</a>
+						<div class="powr-countdown-timer" id="1d337698_1477647158186"></div>
 					</div>
 				</div>
 			</div>
 		</section>
+
 
 		<a id="story" class="in-page-link"></a>
 		<section class="story story-3">
@@ -234,11 +237,35 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<script src="js/smooth-scroll.min.js"></script>
 	<script src="js/placeholders.min.js"></script>
 	<script src="js/flexslider.min.js"></script>
 	<script src="js/spectragram.min.js"></script>
+	<script type="text/javascript" src="js/flipclock.min.js"></script>
+
 	<script src="js/scripts.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="//www.powr.io/powr.js" external-type="html"></script>
+	<script type="text/javascript">
+	var clock;
+
+	$(document).ready(function() {
+
+		// Grab the current date
+		var currentDate = new Date();
+
+		// Set some date in the future. In this case, it's always Jan 1
+		var futureDate  = new Date(currentDate.getFullYear() + 1, 4, 13);
+
+		// Calculate the difference in seconds between the future and current date
+		var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+		// Instantiate a coutdown FlipClock
+		clock = $('.clock').FlipClock(diff, {
+			clockFace: 'DailyCounter',
+			countdown: true
+		});
+	});
+	</script>
 </body>
 </html>
