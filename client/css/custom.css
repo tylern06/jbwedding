@@ -32,10 +32,23 @@ div.hotels {
   width: 620px;
   min-height: 350px;
 }
-div.text-center.hid.btn-primary.btn-xs.desgin_2{
-  display: none;
-}
 
 div.powr-countdown-timer {
   margin-top: 20px;
+}
+
+@media (max-width: 380px){
+  .header-2 h1 {
+    font-size: 36px;
+    color: white;
+      font-weight: 300;
+  }
+}
+
+section.about-us h1 {
+  margin-bottom: 20px;
+}
+
+section.about-us {
+  text-align: center;
 }
