@@ -54,7 +54,9 @@ app.post('/rsvp', function (req,res){
 		res.redirect('/');
 });
 
-var port = process.env.PORT || 5000;
+// var port = process.env.PORT || 5000;
+var port = 8000;
+
 var server = app.listen(port, function(){
 	console.log("********** PORT " + port + " PORT **********")
 });
