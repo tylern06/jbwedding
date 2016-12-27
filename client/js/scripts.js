@@ -11,13 +11,13 @@ $(document).ready(function() {
 
     // Add scrolled class to nav
 
-    $(window).scroll(function() {
-        if ($(window).scrollTop() > 0) {
-            $('nav').addClass('scrolled');
-        } else {
-            $('nav').removeClass('scrolled');
-        }
-    });
+    // $(window).scroll(function() {
+    //     if ($(window).scrollTop() > 0) {
+    //         $('nav').addClass('scrolled');
+    //     } else {
+    //         $('nav').removeClass('scrolled');
+    //     }
+    // });
 
     // Set nav container height for fixed nav
 

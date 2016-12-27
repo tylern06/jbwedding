@@ -362,13 +362,14 @@ a:active {
   top: 0;
   left: 0;
   z-index: 1;
-  background: #75c5b1;
+  /*background: #75c5b1;*/
+  background: url('../img/_cover.jpg');
   background-size: cover !important;
   background-position: 50% 50% !important;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
-  opacity: 0;
+  /*opacity: 0;*/
 }
 .background-image-holder img {
   display: none;
@@ -576,7 +577,15 @@ nav.light.scrolled .line-3 {
 /*!---------- HEADERS ----------*/
 .header {
   padding: 0;
-  background: #75c5b1;
+  /*background: #75c5b1;*/
+/*  background: url('../img/_cover.jpg');
+  background-size: cover !important;
+  background-position: 50% 50% !important;*/
+  /*transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  opacity: 0;*/
+
 }
 .header h1,
 .header h2,

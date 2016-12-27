@@ -9,10 +9,11 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, "./node_modules")));
 // Setting our Views Folder Directory
 app.use(express.static(path.join(__dirname, "./client")));
-// Setting our Views Folder Directory
-app.set('views', path.join(__dirname, './views'));
+
+// Setting our Views Folder Directory for EJS
+// app.set('views', path.join(__dirname, './views'));
 // Setting our View Engine set to EJS
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
 
 // app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
 // app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect CSS bootstrap
@@ -22,11 +23,23 @@ app.set('view engine', 'ejs');
 var nodemailer = require('nodemailer');
 
 // create reusable transporter object using the default SMTP transport
-var transporter = nodemailer.createTransport('smtps://pokemongomapper%40gmail.com:pikachu1@smtp.gmail.com');
+// var transporter = nodemailer.createTransport('smtps://pokemongomapper%40gmail.com:pikachu1@smtp.gmail.com');
+var ses = require('nodemailer-ses-transport');
+var transporter = nodemailer.createTransport({
+    host: 'smtp.zoho.com',
+    port: 465,
+    secure: true, // use SSL
+    auth: {
+        user: 'rsvpjoshandbelinda@zoho.com',
+        pass: 'hilfiger1'
+    }
+});
 
 
-app.get('/', function (req,res){     console.log(req.body)
-res.render("index"); })
+app.get('/', function (req,res){   
+  console.log(req.body)
+	res.render("index");
+ })
 
 app.post('/rsvp', function (req,res){
 	console.log('rsvp submitted');
@@ -35,7 +48,8 @@ app.post('/rsvp', function (req,res){
 		if(req.body.name.length > 2){
 			console.log('mail options');
 			var mailOptions = {
-  				from: '"RSVP" <pokemongomapper@gmail.com>', // sender address 
+  				// from: '"RSVP" <pokemongomapper@gmail.com>', // sender address 
+  				from: '"RSVP" <rsvpjoshandbelinda@zoho.com>', 
 			    to: 'tynguyen06@gmail.com', // list of receivers
 			    subject: 'Josh & Belinda Wedding RSVP', // Subject line
 			    text: 'Hey Guys', // plaintext body
@@ -54,8 +68,8 @@ app.post('/rsvp', function (req,res){
 		res.redirect('/');
 });
 
-// var port = process.env.PORT || 5000;
-var port = 8000;
+var port = process.env.PORT || 5000;
+// var port = 8000;
 
 var server = app.listen(port, function(){
 	console.log("********** PORT " + port + " PORT **********")
