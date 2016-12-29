@@ -117,6 +117,10 @@ section {
   overflow: hidden;
   position: relative;
 }
+
+section h1, section h2 {
+  padding-top: 20px;
+}
 section .container {
   position: relative;
   z-index: 2;
@@ -363,7 +367,7 @@ a:active {
   left: 0;
   z-index: 1;
   /*background: #75c5b1;*/
-  background: url('../img/_cover.jpg');
+  background: url('../img/_cover2.jpg');
   background-size: cover !important;
   background-position: 50% 50% !important;
   transition: all 0.3s ease;
@@ -1154,7 +1158,7 @@ section.story-1, section.story-2, section.story-3 {
   margin-bottom: 40px;
 }
 .accom-2 {
-  padding-top: 10px;
+  /*padding-top: 10px;*/
   padding-bottom: 10px;
 }
 .accom-2 .feature {
@@ -1162,8 +1166,8 @@ section.story-1, section.story-2, section.story-3 {
   width: 300px;
 }
 .accom-2 h2 {
-  margin-top: 100px;
-  margin-bottom: 60px;
+  /*margin-top: 100px;*/
+  margin-bottom: 30px;
 }
 .accom-2 img {
   display: inline-block;
@@ -1379,10 +1383,10 @@ input[type="submit"]:focus {
 
 .rsvp-2 {
   padding-bottom: 40px;
-  padding-top: 10px;
+  /*padding-top: 10px;*/
 }
 .rsvp-2 h1 {
-  margin-top: 100px;
+  margin-top: 20px;
   margin-bottom: 30px;
 }
 .rsvp-2 p:last-of-type {
@@ -1394,7 +1398,7 @@ input[type="submit"]:focus {
 .rsvp-2 .form-wrapper {
   width: 475px;
   margin: 0 auto;
-  background: #fcfcfc;
+  background: white;
   padding: 60px 0;
 }
 .rsvp-2 .form-section {

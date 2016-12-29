@@ -8,7 +8,7 @@ myAppModule.config(function ($routeProvider, $locationProvider) {
 		templateUrl:'partials/story.html'
 	})
 	.when('/about',{
-		templateUrl:'partials/aboutUs.html'
+		templateUrl:'partials/about.html'
 	})
 	.when('/wedding',{
 		templateUrl:'partials/wedding.html'
