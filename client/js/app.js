@@ -7,6 +7,24 @@ myAppModule.config(function ($routeProvider, $locationProvider) {
 	.when('/story',{
 		templateUrl:'partials/story.html'
 	})
+	.when('/about',{
+		templateUrl:'partials/aboutUs.html'
+	})
+	.when('/wedding',{
+		templateUrl:'partials/wedding.html'
+	})
+	.when('/lodging',{
+		templateUrl:'partials/accom.html'
+	})
+	.when('/rsvp',{
+		templateUrl:'partials/rsvp.html'
+	})
+	.when('/gallery',{
+		templateUrl:'partials/gallery.html'
+	})
+	.when('/registry',{
+		templateUrl:'partials/registry.html'
+	})
 	.otherwise({
 		redirectTo: '/home'
 	});
