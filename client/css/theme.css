@@ -1325,8 +1325,11 @@ input[type="submit"]:focus {
   }
 }
 .rsvp form {
-  margin: 0 auto;
-  display: inline-block;
+/*  margin: 0 auto;
+  display: inline-block;*/
+}
+.rsvp textarea {
+  width: 100%;
 }
 .rsvp form input[type="text"] {
   height: 55px;
@@ -1396,7 +1399,7 @@ input[type="submit"]:focus {
   margin-bottom: 5px;
 }
 .rsvp-2 .form-wrapper {
-  width: 475px;
+  max-width: 475px;
   margin: 0 auto;
   background: white;
   padding: 60px 0;

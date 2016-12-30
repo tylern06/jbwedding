@@ -150,3 +150,7 @@ ul.menu li a:hover {
     transform: scale(1);
 }
 .pop.ng-leave-active {}
+
+p#remove-margin {
+  margin-bottom: 0 !important;
+}
