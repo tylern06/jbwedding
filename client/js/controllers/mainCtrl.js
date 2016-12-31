@@ -1,3 +1,3 @@
-myAppModule.controller('mainCtrl', function($scope) {
-	// $scope.testing = 'hello';
+myAppModule.controller('mainCtrl', function($scope, $location) {
+	$scope.testing = $location.path();
 })

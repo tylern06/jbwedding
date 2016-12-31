@@ -10,6 +10,12 @@ app.use(express.static(path.join(__dirname, "./node_modules")));
 // Setting our Views Folder Directory
 app.use(express.static(path.join(__dirname, "./client")));
 
+//use pseudo path to equal the full path 
+app.use('/lightgallerycss', express.static(__dirname + '/node_modules/lightgallery/dist/css')); // redirect lightgallery
+app.use('/lightgalleryjs', express.static(__dirname + '/node_modules/lightgallery/dist/js')); // redirect lightgallery
+app.use('/lgthumbnailjs', express.static(__dirname + '/node_modules/lg-thumbnail/dist')); // redirect lightgallery
+app.use('/lgfullscreenjs', express.static(__dirname + '/node_modules/lg-fullscreen/dist')); // redirect lightgallery
+
 // Setting our Views Folder Directory for EJS
 // app.set('views', path.join(__dirname, './views'));
 // Setting our View Engine set to EJS

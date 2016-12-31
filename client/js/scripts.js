@@ -9,6 +9,10 @@ $(document).ready(function() {
         speed: 800
     });
 
+    //initiate lightgallery
+    // $("#lightgallery").lightGallery(); 
+
+
     // Add scrolled class to nav
 
     // $(window).scroll(function() {

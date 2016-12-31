@@ -24,6 +24,7 @@
 body {
   background: url('../img/cover2.jpg'); 
   -webkit-backface-visibility: hidden;
+  /*position: fixed;*/
 }
 .main-container,
 .nav-container,
@@ -1163,14 +1164,14 @@ section.story-1, section.story-2, section.story-3 {
 }
 .accom-2 .feature {
   margin-bottom: 60px;
-  width: 300px;
+  /*width: 300px;*/
 }
 .accom-2 h2 {
   /*margin-top: 100px;*/
   margin-bottom: 30px;
 }
 .accom-2 img {
-  display: inline-block;
+  /*display: inline-block;*/
   margin-bottom: 30px;
 }
 .accom-2 h6 {
@@ -1402,7 +1403,7 @@ input[type="submit"]:focus {
   max-width: 475px;
   margin: 0 auto;
   background: white;
-  padding: 60px 0;
+  /*padding: 60px 0;*/
 }
 .rsvp-2 .form-section {
   margin-bottom: 40px;
@@ -1410,6 +1411,9 @@ input[type="submit"]:focus {
 .rsvp-2 h6 {
   color: #777;
   margin-bottom: 20px;
+}
+input#rsvp-btn {
+  margin-bottom: 50px;
 }
 .form-error,
 .form-success {
