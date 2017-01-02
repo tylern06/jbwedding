@@ -49,10 +49,9 @@ div.powr-countdown-timer {
   }
 }
 
-section.about-us h1 {
-  /*margin-top: 50px;*/
+div#mygallery {
+  margin-top: 150px;
 }
-
 section.about-us {
 /*  position: relative;
   top: 120px;*/
@@ -175,7 +174,7 @@ p#remove-margin {
                 margin-bottom: 15px;
                 margin-right: 20px;
                 width: 250px !important;
-                height: 200px !important;
+                max-height: 160px !important;
                 overflow: hidden;
 
             }
@@ -186,6 +185,8 @@ p#remove-margin {
               overflow: hidden;
               position: relative;
               float: left;
+               /*border: 1px solid red;*/
+        
             }
             .demo-gallery > ul > li a > img {
               -webkit-transition: -webkit-transform 0.15s ease 0s;
@@ -196,6 +197,7 @@ p#remove-margin {
               transform: scale3d(1, 1, 1);
               height: 100%;
               width: 100%;
+
             }
             .demo-gallery > ul > li a:hover > img {
               -webkit-transform: scale3d(1.1, 1.1, 1.1);
