@@ -37,7 +37,11 @@ nav.fixed,
   left: 0;
   right: 0;
   overflow: hidden;
+}
+
+nav, nav.fixed {
   height: 100%;
+
 }
 body.body-bg {
   background: white;
