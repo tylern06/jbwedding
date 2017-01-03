@@ -74,7 +74,10 @@ ul.menu li a:hover {
   color: white !important;
   background: #75c5b1;
   /*opacity: 0.9; */
-  padding: 10px 10px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  padding: 10px;
 }
 
 .story-3.welcome {

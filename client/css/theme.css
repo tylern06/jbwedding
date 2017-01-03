@@ -22,7 +22,7 @@
 
 /*!---------- GLOBAL STYLES ----------*/
 body {
-  background: url('../img/cover2.jpg'); 
+  background: url('../img/cover2.jpg');
   -webkit-backface-visibility: hidden;
   /*position: fixed;*/
 }
@@ -37,6 +37,7 @@ nav.fixed,
   left: 0;
   right: 0;
   overflow: hidden;
+  height: 100%;
 }
 body.body-bg {
   background: white;
@@ -462,7 +463,7 @@ nav {
 }
 .menu li {
   float: left;
-  margin-right: 32px;
+  margin-right: 15px;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -485,6 +486,7 @@ nav {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-right: -2px;
+  padding: 10px;
   font-size: 11px;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
@@ -518,12 +520,14 @@ nav {
     opacity: 0;
   }
   .nav-open {
-    max-height: 600px;
+    max-height: 1600px;
   }
   .nav-open .menu {
     transform: translateX(0);
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
+    text-align: center;
+    margin-top: 30%;
   }
   .nav-open .menu li {
     opacity: 1;
@@ -549,6 +553,7 @@ nav {
   -moz-transition: all 0.3s ease;
   opacity: .4;
 }
+
 .mobile-toggle:hover .line-1,
 .mobile-toggle:hover .line-2,
 .mobile-toggle:hover .line-3 {
