@@ -742,6 +742,7 @@ nav.light.scrolled .line-3 {
 @media all and (max-width: 767px) {
   .header-2 {
     height: 500px;
+    padding-top: 50px;
   }
 }
 .header-3 {
