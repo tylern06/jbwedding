@@ -1,22 +1,13 @@
 <script type="text/javascript">
     $(document).ready(function() {
-        // $("#mygallery").justifiedGallery({
-        // 	  rowHeight : 200,
-				    // lastRow : 'nojustify',
-				    // margins : 10
-        // });
-        //  $("#mygallery").lightGallery({
-        // 	    thumbnail: true
-        // });
-        // $("#lightgallery").lightGallery(); 
-
-            // Animated thumbnails
+        // Animated thumbnails
 		    var $gallery = $('#mygallery');
 		    if ($gallery.length) {
 		        $gallery.justifiedGallery({
 		            border: 6,
 		            rowHeight: 150,
 		            margins: 10
+		           //on gallery complete event, run lightGallery
 		        }).on('jg.complete', function() {
 		            $gallery.lightGallery({
 		                thumbnail: true
@@ -27,54 +18,57 @@
     });
 
 </script>
-<div class='container'>       
-	<div id="mygallery" class='demo-gallery'>
-			<a href="img/jb1.jpg" data-sub-html="J&B" >
-				<img alt="J&B" src="img/jb1.jpg"/>
-			</a>
-			<a href="img/jb2.jpg" data-sub-html="J&B">
-				<img alt="J&B" src="img/jb2.jpg"/>
-			</a>
-			<a href="img/jb3.jpg" data-sub-html="J&B">
-				<img alt="J&B" src="img/jb3.jpg"/>
-			</a>
-			<a href="img/jb4.jpg" data-sub-html="J&B">
-				<img alt="J&B" src="img/jb4.jpg"/>
-			</a>
-			<a href="img/jb5.jpg" data-sub-html="J&B">
-				<img alt="J&B" src="img/jb5.jpg"/>
-			</a>
-			</a>
-			<a href="img/jb6.jpg" data-sub-html="J&B">
-				<img alt="J&B" src="img/jb6.jpg"/>
-			</a>
-			</a>
-			<a href="img/jb7.jpg" data-sub-html="J&B">
-				<img alt="J&B" src="img/jb7.jpg"/>
-			</a>
-			</a>
-			<a href="img/jb8.jpg" data-sub-html="J&B">
-				<img alt="J&B" src="img/jb8.jpg"/>
-			</a>
-			<a href="img/jb9.jpg" data-sub-html="J&B">
-				<img alt="J&B" src="img/jb9.jpg"/>
-			</a>
-				<a href="img/jb10.jpg" data-sub-html="J&B">
-				<img alt="J&B" src="img/jb10.jpg"/>
-			</a>
-				<a href="img/jb11.jpg" data-sub-html="J&B">
-				<img alt="J&B" src="img/jb11.jpg"/>
-			</a>
-				<a href="img/jb12.jpg" data-sub-html="J&B">
-				<img alt="J&B" src="img/jb12.jpg"/>
-			</a>
-				<a href="img/jb13.jpg" data-sub-html="J&B">
-				<img alt="J&B" src="img/jb13.jpg"/>
-			</a>
-				<a href="img/jb14.jpg" data-sub-html="J&B">
-				<img alt="J&B" src="img/jb14.jpg"/>
-			</a>	<a href="img/jb15.jpg" data-sub-html="J&B">
-				<img alt="J&B" src="img/jb15.jpg"/>
-			</a>
+<div class='gallery-section'>
+	<div class='container'>       
+		<div id="mygallery" class='demo-gallery'>
+				<a href="img/jb1.jpg" data-sub-html="J&B" >
+					<img alt="J&B" src="img/jb1.jpg"/>
+				</a>
+				<a href="img/jb2.jpg" data-sub-html="J&B">
+					<img alt="J&B" src="img/jb2.jpg"/>
+				</a>
+				<a href="img/jb3.jpg" data-sub-html="J&B">
+					<img alt="J&B" src="img/jb3.jpg"/>
+				</a>
+				<a href="img/jb4.jpg" data-sub-html="J&B">
+					<img alt="J&B" src="img/jb4.jpg"/>
+				</a>
+				<a href="img/jb5.jpg" data-sub-html="J&B">
+					<img alt="J&B" src="img/jb5.jpg"/>
+				</a>
+				</a>
+				<a href="img/jb6.jpg" data-sub-html="J&B">
+					<img alt="J&B" src="img/jb6.jpg"/>
+				</a>
+				</a>
+				<a href="img/jb7.jpg" data-sub-html="J&B">
+					<img alt="J&B" src="img/jb7.jpg"/>
+				</a>
+				</a>
+				<a href="img/jb8.jpg" data-sub-html="J&B">
+					<img alt="J&B" src="img/jb8.jpg"/>
+				</a>
+				<a href="img/jb9.jpg" data-sub-html="J&B">
+					<img alt="J&B" src="img/jb9.jpg"/>
+				</a>
+					<a href="img/jb10.jpg" data-sub-html="J&B">
+					<img alt="J&B" src="img/jb10.jpg"/>
+				</a>
+					<a href="img/jb11.jpg" data-sub-html="J&B">
+					<img alt="J&B" src="img/jb11.jpg"/>
+				</a>
+					<a href="img/jb12.jpg" data-sub-html="J&B">
+					<img alt="J&B" src="img/jb12.jpg"/>
+				</a>
+					<a href="img/jb13.jpg" data-sub-html="J&B">
+					<img alt="J&B" src="img/jb13.jpg"/>
+				</a>
+					<a href="img/jb14.jpg" data-sub-html="J&B">
+					<img alt="J&B" src="img/jb14.jpg"/>
+				</a>	<a href="img/jb15.jpg" data-sub-html="J&B">
+					<img alt="J&B" src="img/jb15.jpg"/>
+				</a>
+		</div>
 	</div>
+
 </div>
